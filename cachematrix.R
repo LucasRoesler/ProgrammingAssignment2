@@ -3,6 +3,7 @@
 ## cacheSolve will solve and cache the results in the CacheMatrix
 ##     object.
 
+#####
 ## makeCacheMatrix creates a matrix like object that is capable of 
 ## caching its inverse.
 ##
@@ -32,6 +33,7 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
+#####
 ## Find the inverse of a CacheMatrix using solve(), if the 
 ## the inverse has already been solved, we returned the cached
 ## value.  solve can be used to solve the equation a %*% x  = b
@@ -72,7 +74,7 @@ cacheSolve <- function(x, ...) {
         
         if(length(dots)==0){
             # only cache the inverse when solve is not passed 
-            # additional arguments
+            # any additional arguments
             x$setinverse(i)
         }
         
